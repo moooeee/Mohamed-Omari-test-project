@@ -1,0 +1,36 @@
+.gallery {
+  position: relative;
+
+  .selectedImage {
+    position: relative;
+    display: flex;
+
+    img {
+      width: 100%;
+    }
+
+    .controlBtns {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: flex;
+      gap: var(--margin-1x);
+
+      button {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: rgba(0, 0, 0, 0.73);
+        cursor: pointer;
+
+        svg {
+          width: 30px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

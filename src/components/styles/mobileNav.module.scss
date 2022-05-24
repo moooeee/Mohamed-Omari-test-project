@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .trigger {
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    padding: 0 20px;
+    font-size: var(--font-4x);
+    font-family: inherit;
+
+    &:hover {
+      background-color: #eee8;
+    }
+  }
+
+  .dropdown {
+    width: 150px;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding: 7px 0;
+      box-shadow: 0px 4px 35px rgba(168, 172, 176, 0.19);
+
+      li {
+        a {
+          display: block;
+          text-align: center;
+          background: none;
+          border: none;
+          width: auto;
+          padding: 10px;
+          font-size: var(--font-4x);
+          color: var(--black);
+          text-decoration: none;
+        }
+
+        &:hover {
+          background-color: #eee8;
+        }
+      }
+    }
+  }
+}

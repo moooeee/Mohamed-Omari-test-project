@@ -1,0 +1,292 @@
+.container {
+  padding: 0 100px;
+
+  padding-top: 150px;
+
+  .heading {
+    font-size: var(--font-7x);
+    font-weight: bold;
+    margin-bottom: var(--margin-10x);
+    text-align: start;
+  }
+  .cartBody {
+    .productsList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: var(--margin-9x);
+    }
+
+    .totalPrice {
+      display: flex;
+      flex-direction: column;
+      gap: var(--margin-2x);
+      font-size: var(--font-6x);
+      text-align: start;
+      max-width: 290px;
+      margin-bottom: var(--margin-9x);
+      font-family: "Raleway";
+
+      .orderBtn {
+        font-size: var(--font-2x);
+        border: none;
+        background: var(--green);
+        color: white;
+        padding: 13px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: var(--margin-1x);
+        transition: background var(--transition-1);
+        font-family: inherit;
+
+        &:hover {
+          background-color: darken(#5ece7b, 15);
+        }
+
+        &:active {
+          background-color: darken(#5ece7b, 20);
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    padding: 0 50px;
+    padding-top: 150px;
+  }
+
+  @media screen and (max-width: 770px) {
+    .cartBody {
+      .totalPrice {
+        font-size: var(--font-4x);
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 10px;
+    padding-top: 150px;
+  }
+}
+
+.cartProductItem {
+  padding: 24px 0;
+  border-top: 1px solid #e3e3e355;
+
+  &:last-child {
+    border-bottom: 1px solid #e3e3e355;
+  }
+
+  .productItemBody {
+    display: flex;
+    gap: var(--margin-3x);
+
+    .productInfo {
+      width: 100%;
+      text-align: start;
+
+      .productBrand {
+        font-size: var(--font-7x);
+        margin-bottom: var(--margin-3x);
+      }
+
+      .productName {
+        font-size: var(--font-7x);
+        font-weight: normal;
+        margin-bottom: var(--margin-4x);
+      }
+
+      .productPrice {
+        font-size: var(--font-6x);
+        margin-bottom: var(--margin-4x);
+      }
+
+      .productAttrs {
+        display: flex;
+        flex-direction: column;
+        z-index: 20;
+        gap: var(--margin-3x);
+
+        .swatchAttrs {
+          .swatchAttr {
+            .attrName {
+              font-size: var(--font-4x);
+              font-weight: bold;
+              margin-bottom: var(--margin-2x);
+            }
+            .attrValues {
+              display: flex;
+              gap: var(--margin-2x);
+              flex-wrap: wrap;
+
+              .attrValue {
+                border: none;
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+
+                &[data-selected="true"] {
+                  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px,
+                    #5ece7b 0px 0px 0px 3px;
+                }
+              }
+            }
+          }
+        }
+        .textAttrs {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin-bottom: var(--margin-3x);
+
+          .textAttr {
+            .attrName {
+              font-size: var(--font-4x);
+              font-weight: bold;
+              margin-bottom: var(--margin-2x);
+            }
+            .attrValues {
+              display: flex;
+              align-items: center;
+              gap: var(--margin-1x);
+              flex-wrap: wrap;
+
+              .attrValue {
+                border: 1px solid var(--black);
+                font-size: var(--font-3x);
+                font-family: source sans pro;
+                padding: 1px 4px;
+                padding: 14px 22px;
+                background: white;
+                color: var(--black);
+                cursor: pointer;
+
+                &[data-selected="true"] {
+                  color: white;
+                  background: var(--black);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .productQuantity {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .productAmount {
+        font-size: var(--font-6x);
+      }
+
+      button {
+        width: 45px;
+        height: 45px;
+        border: 1px solid;
+        background: white;
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 770px) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .productGallery {
+      width: 300px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .productItemBody {
+      .productInfo {
+        .productBrand {
+          font-size: var(--font-4x);
+        }
+        .productName {
+          font-size: var(--font-4x);
+        }
+        .productPrice {
+          font-size: var(--font-4x);
+        }
+        .productAttrs {
+          .textAttrs {
+            .textAttr {
+              .attrName {
+                font-size: var(--font-3x);
+              }
+              .attrValues {
+                .attrValue {
+                  min-width: 60px;
+                  min-height: 45px;
+                  padding: 8px 10px;
+                }
+              }
+            }
+          }
+          .swatchAttrs {
+            .swatchAttr {
+              .attrName {
+                font-size: var(--font-3x);
+              }
+            }
+          }
+        }
+      }
+
+      .productQuantity {
+        flex-direction: row;
+        justify-content: space-between;
+
+        button {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .productItemBody {
+      .productInfo {
+        .productAttrs {
+          .textAttrs {
+            .textAttr {
+              .attrValues {
+                .attrValue {
+                  min-width: 40px;
+                  min-height: 35px;
+                }
+              }
+            }
+          }
+          .swatchAttrs {
+            .swatchAttr {
+              .attrValues {
+                .attrValue {
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.cartOverlay {
+  padding: 32px 16px;
+
+  position: absolute;
+  top: 51px;
+  right: 0;
+
+  width: 330px;
+  z-index: 100;
+  background-color: white;
+  max-height: 75vh;
+  overflow-y: auto;
+
+  .cartOverlayBody {
+    .heading {
+      font-size: var(--font-3x);
+      font-weight: normal;
+      margin-bottom: var(--margin-6x);
+      text-align: start;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .productsList {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--margin-6x);
+    }
+
+    .totalPrice {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-top: var(--margin-6x);
+      margin-bottom: var(--margin-6x);
+
+      > div {
+        font-family: "Roboto";
+      }
+    }
+
+    .checkout {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        width: 140px;
+        height: 40px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: var(--font-2x);
+      }
+
+      .viewBag {
+        border: 1px solid;
+        color: var(--black);
+
+        &:hover {
+          transition: background-color var(--transition-1);
+          background: darken(white, 3);
+        }
+      }
+
+      .checkout {
+        background: var(--green);
+        color: white;
+        transition: background-color var(--transition-1);
+
+        &:hover {
+          background: var(--green-darker);
+        }
+      }
+    }
+
+    .emptyCart {
+      text-align: center;
+    }
+  }
+
+  // @media screen and (max-width: 690px) {
+  // @media screen and (max-width: 500px) {
+  @media screen and (max-width: 770px) {
+    width: calc(100vw - 80px);
+  }
+}

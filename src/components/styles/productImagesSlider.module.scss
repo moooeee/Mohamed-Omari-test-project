@@ -1,0 +1,52 @@
+.container {
+  width: calc(100% - 400px);
+  display: flex;
+  justify-content: center;
+  gap: var(--margin-6x);
+
+  .mainImage {
+    width: 70%;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .thumbs {
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-4x);
+
+    .imageWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      background: none;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 890px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-bottom: var(--margin-11x);
+
+    .thumbs {
+      width: 100%;
+      flex-direction: row;
+      gap: 0px;
+
+      .imageWrapper {
+        width: 100%;
+      }
+    }
+  }
+}

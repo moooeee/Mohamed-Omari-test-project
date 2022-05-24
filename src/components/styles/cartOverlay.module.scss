@@ -1,0 +1,43 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .triggerWrapper {
+    position: relative;
+
+    .trigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: var(--font-4x);
+
+      svg {
+        margin-top: 2px;
+      }
+    }
+
+    .itemsCount {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-1x);
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      color: white;
+      background: var(--black);
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+
+      span {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
